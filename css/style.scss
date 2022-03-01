@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+$main-color: #6699ff;
+$secondary-color: #99ccff; 
+$third-color: #99bbff;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: $main-color 1px solid;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.user-container{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    margin: 10px;
+}
+
+.user-container > div{
+    margin: 20px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.user-details > div{
+    margin: 15px;
+}
+
+.full-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.last-name{
+    padding-left: 10px;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.location-address{
+    text-transform: capitalize;
+}
+
+.generate-button{
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 20px;
+    border: $main-color solid 1px;
+    background-color: $secondary-color;
+    cursor: pointer;
+}
+
+.generate-button:hover{
+    background-color: $third-color;
+}
+
+.generate-button:active{
+    background-color: $third-color;
+}
+
+@media screen and (max-width: 1000px) {
+    .user-container{
+        flex-direction: column;
+    }
+}
