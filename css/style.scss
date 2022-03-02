@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+$main-color: #1867c0;
+$secondary-color: #1866c0e5; 
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    border-radius: 30px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $main-color;
+        margin: 10px;
+    }
+
+    a:hover{
+        color: $secondary-color;
+    }
+
+    a:active{
+        color: $main-color;
+    }
+    
+    .active{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+.user-container{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    margin: 10px;
+}
+
+.user-container > div{
+    margin: 20px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.user-details > div{
+    margin: 15px;
+}
+
+.full-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.last-name{
+    padding-left: 10px;
+}
+
+.label{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.location-address{
+    text-transform: capitalize;
+}
+
+.generate-button{
+    font-size: 18px;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+    border: $main-color solid 1px;
+    background-color: $main-color;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.generate-button:hover{
+    background-color: $secondary-color;
+}
+
+.generate-button:active{
+    background-color: $secondary-color;
+}
+
+@media screen and (max-width: 1000px) {
+    .user-container{
+        flex-direction: column;
+    }
+    .navbar{
+        flex-direction: column;
+        a{
+            border: none;
+        }
+    }
+}

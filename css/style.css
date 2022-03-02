@@ -1,1 +1,164 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 30px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar a {
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1867c0;
+  margin: 10px;
+}
+
+.navbar a:hover {
+  color: #1866c0e5;
+}
+
+.navbar a:active {
+  color: #1867c0;
+}
+
+.navbar .active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  margin: 10px;
+}
+
+.user-container > div {
+  margin: 20px;
+}
+
+.avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+.user-details > div {
+  margin: 15px;
+}
+
+.full-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 36px;
+}
+
+.last-name {
+  padding-left: 10px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.location-address {
+  text-transform: capitalize;
+}
+
+.generate-button {
+  font-size: 18px;
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  border: #1867c0 solid 1px;
+  background-color: #1867c0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.generate-button:hover {
+  background-color: #1866c0e5;
+}
+
+.generate-button:active {
+  background-color: #1866c0e5;
+}
+
+@media screen and (max-width: 1000px) {
+  .user-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar a {
+    border: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
