@@ -95,6 +95,13 @@ body{
     text-transform: capitalize;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .generate-button{
     font-size: 18px;
     color: white;
