@@ -63,14 +63,11 @@ function generateInformation() {
     const infoElement = document.createElement('div');
     infoElement.setAttribute('class', 'info');
     const infoText = 'Nothing to see here yet. Generate users on home page!';
-    infoElement.appendChild(document.createTextNode(infoText));
-    console.log(infoElement);
-    return infoElement;
+    infoElement.appendChild(document.createTextNode(infoText)); return infoElement;
 }
 
 function displayHistoryContent() {
     let element;
-    console.log(localStorage.length)
     if (localStorage.length == 0) {
         element = generateInformation()
     }
