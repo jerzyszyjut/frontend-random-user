@@ -1,0 +1,31 @@
+.info {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 30px;
+}
+
+.table {
+    width: 100%;
+    overflow: auto;
+    min-width: 600px;
+}
+
+.header {
+    user-select: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.cell {
+    border-right: 1px solid black;
+    padding: 2px 10px 2px 10px ;
+}
+
+.cell:nth-child(1){
+    border-left: 1px solid black;
+}
