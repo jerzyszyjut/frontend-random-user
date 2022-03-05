@@ -1,6 +1,10 @@
 const BASE_URL = 'https://randomuser.me/api/';
 
-const parameters = ['name', 'location', 'picture', 'nat', 'registered'];
+const parameters = ['name', 'picture', 'nat', 'registered', 'location'];
+const checkbox = document.getElementById('hide-address-checkbox');
+const button = document.getElementById('generate-button');
+
+let isAddressHidden = false;
 
 function parseLocationAddress(location) {
     const stringLocation = `${location.street.number} ${location.street.name}, ${location.city} ${location.postcode}, ${location.state}, ${location.country}`;
@@ -41,7 +45,12 @@ function displayUser(user) {
     const formatedDate = new Date(user.registered.date).toLocaleString('en-GB', { timeZone: 'UTC' })
     registerDate.textContent = formatedDate;
     nationality.textContent = user.nat;
-    locationAddress.textContent = parseLocationAddress(user.location);
+    if (user.location) {
+        locationAddress.textContent = parseLocationAddress(user.location);
+    }
+    else {
+        locationAddress.textContent = 'Not fetched'
+    }
 }
 
 function addUserToLocalStorage(user) {
@@ -85,6 +94,28 @@ function hideInfoAndShowUserContent() {
     userContainer.setAttribute('class', 'user-container');
 }
 
+function hideAddressContainer() {
+    const locationAddressContainer = document.getElementById('location-address-container');
+    if (isAddressHidden) {
+        locationAddressContainer.setAttribute('class', 'location-address-container hidden details-container');
+    }
+    else {
+        locationAddressContainer.setAttribute('class', 'location-address-container details-container');
+    }
+}
+
+function hideAddress() {
+    isAddressHidden = !isAddressHidden;
+    hideAddressContainer()
+    if (isAddressHidden) {
+        parameters.pop();
+    }
+    else {
+        parameters.push('location');
+    }
+    console.log(parameters);
+}
+
 async function generateUser() {
     const user = await getUser();
     addUserToLocalStorage(user);
@@ -92,5 +123,5 @@ async function generateUser() {
     displayUser(user);
 }
 
-const button = document.getElementById('generate-button');
+checkbox.addEventListener('click', hideAddress);
 button.addEventListener('click', generateUser);
