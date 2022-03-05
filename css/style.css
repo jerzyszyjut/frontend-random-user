@@ -144,6 +144,16 @@ body {
   background-color: #1866c0e5;
 }
 
+.info {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .user-container {
     -webkit-box-orient: vertical;

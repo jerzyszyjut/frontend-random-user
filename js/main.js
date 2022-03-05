@@ -67,9 +67,17 @@ async function getUser() {
     }
 };
 
+function hideInfoAndShowUserContent() {
+    const info = document.getElementById('info');
+    info.setAttribute('class', 'hidden');
+    const userContainer = document.getElementById('user-container');
+    userContainer.setAttribute('class', 'user-container');
+}
+
 async function generateUser() {
     const user = await getUser();
     addUserToLocalStorage(user);
+    hideInfoAndShowUserContent();
     displayUser(user);
 }
 
