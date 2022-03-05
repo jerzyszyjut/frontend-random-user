@@ -5,6 +5,17 @@ function parseLocationAddress(location) {
     return stringLocation;
 }
 
+function parseUserDataForHistory(userData) {
+    const user = {
+        first_name: userData.name.first,
+        last_name: userData.name.last,
+        country: userData.nat,
+        register_date: new Date(userData.registered.date).toLocaleString('en-GB', { timeZone: 'UTC' })
+    }
+
+    return user;
+}
+
 function displayUser(user) {
     const profilePicture = document.getElementById('profile-picture');
     const firstName = document.getElementById('first-name');
@@ -23,6 +34,7 @@ function displayUser(user) {
 }
 
 function addUserToLocalStorage(user) {
+    user = parseUserDataForHistory(user);
     if (localStorage.length == 0) {
         const users = [];
         users.push(user);

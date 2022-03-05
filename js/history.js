@@ -1,16 +1,5 @@
 const table = document.getElementById('history-table');
 
-function parseUserData(userData) {
-    const user = {
-        first_name: userData.name.first,
-        last_name: userData.name.last,
-        country: userData.nat,
-        register_date: new Date(userData.registered.date).toLocaleString('en-GB', { timeZone: 'UTC' })
-    }
-
-    return user;
-}
-
 function generateCell(className, value) {
     const cellElement = document.createElement('div');
     cellElement.setAttribute('class', `cell ${className}`);
@@ -51,7 +40,7 @@ function generateTable(users) {
     tableElement.appendChild(generateHeader());
 
     for (const user in users) {
-        const formatedUserData = parseUserData(users[user]);
+        const formatedUserData = users[user];
         const rowElement = generateRow(formatedUserData);
         tableElement.appendChild(rowElement);
     }
