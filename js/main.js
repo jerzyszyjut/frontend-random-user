@@ -10,7 +10,7 @@ function parseUserDataForHistory(userData) {
         first_name: userData.name.first,
         last_name: userData.name.last,
         country: userData.nat,
-        register_date: new Date(userData.registered.date).toLocaleString('en-GB', { timeZone: 'UTC' })
+        register_date: userData.registered.date
     }
 
     return user;

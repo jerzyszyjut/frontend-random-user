@@ -6,9 +6,12 @@
 
 .table {
     width: 100%;
-    padding: 10px;
     overflow: auto;
     min-width: 600px;
+}
+
+.header {
+    user-select: none;
 }
 
 .row {
