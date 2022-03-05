@@ -1,5 +1,7 @@
 const BASE_URL = 'https://randomuser.me/api/';
 
+const parameters = ['name', 'location', 'picture', 'nat', 'registered'];
+
 function parseLocationAddress(location) {
     const stringLocation = `${location.street.number} ${location.street.name}, ${location.city} ${location.postcode}, ${location.state}, ${location.country}`;
     return stringLocation;
@@ -16,6 +18,15 @@ function parseUserDataForHistory(userData) {
     return user;
 }
 
+function parseParamentersToQueryString() {
+    let query = '?inc=';
+    for (const parameter in parameters) {
+        query += parameters[parameter];
+        query += ','
+    }
+    return query;
+}
+
 function displayUser(user) {
     const profilePicture = document.getElementById('profile-picture');
     const firstName = document.getElementById('first-name');
@@ -27,7 +38,7 @@ function displayUser(user) {
     profilePicture.src = user.picture.large;
     firstName.textContent = user.name.first;
     lastName.textContent = user.name.last;
-    const formatedDate = new Date(user.dob.date).toLocaleString('en-GB', { timeZone: 'UTC' })
+    const formatedDate = new Date(user.registered.date).toLocaleString('en-GB', { timeZone: 'UTC' })
     registerDate.textContent = formatedDate;
     nationality.textContent = user.nat;
     locationAddress.textContent = parseLocationAddress(user.location);
@@ -42,7 +53,6 @@ function addUserToLocalStorage(user) {
     }
     else {
         let users = JSON.parse(localStorage.getItem('usersHistory'));
-        console.log(users)
         users.push(user);
         if (users.length > 10) {
             users.splice(0, 1);
@@ -54,7 +64,8 @@ function addUserToLocalStorage(user) {
 async function getUser() {
     try {
         let userData;
-        await fetch(BASE_URL).then(response => {
+        const url = BASE_URL + parseParamentersToQueryString();
+        await fetch(url).then(response => {
             return response.json();
         })
             .then(responseData => {
@@ -67,9 +78,17 @@ async function getUser() {
     }
 };
 
+function hideInfoAndShowUserContent() {
+    const info = document.getElementById('info');
+    info.setAttribute('class', 'hidden');
+    const userContainer = document.getElementById('user-container');
+    userContainer.setAttribute('class', 'user-container');
+}
+
 async function generateUser() {
     const user = await getUser();
     addUserToLocalStorage(user);
+    hideInfoAndShowUserContent();
     displayUser(user);
 }
 
