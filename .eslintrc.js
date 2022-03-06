@@ -16,5 +16,6 @@ module.exports = {
     'guard-for-in': 'off',
     'import/extensions': 'off',
     'prefer-destructuring': 'off',
+    'linebreak-style': 'off',
   },
 };
