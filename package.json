@@ -1,0 +1,22 @@
+{
+  "name": "random-user-generator-profil-software-recruitment",
+  "version": "1.0.0",
+  "description": "- [Technologies](#technologies)\r - [Dependencies](#dependencies)\r - [APIs](#apis)\r - [Setup](#setup)\r     - [Local hosting](#local-hosting)\r     - [EditorConfig](#editorconfig)\r     - [SASS](#sass-scss)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerzyszyjut/frontend-random-user.git"
+  },
+  "author": "Jerzy Szyjut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerzyszyjut/frontend-random-user/issues"
+  },
+  "homepage": "https://github.com/jerzyszyjut/frontend-random-user#readme"
+}
