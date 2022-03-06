@@ -2,64 +2,64 @@
 <html>
 
 <head>
-    <title>Home - Random user</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jerzy Szyjut">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" src="./js/services/history.service.js" defer></script>
-    <script type="module" src="./js/services/api.service.js" defer></script>
-    <script type="module" src="./js/ui/index.js" defer></script>
-    <script type="module" src="./js/eventHandling/index.js" defer></script>
-    <script type="module" src="./js/index.js" defer></script>
+  <title>Home - Random user</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jerzy Szyjut">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="./js/services/history.service.js" defer></script>
+  <script type="module" src="./js/services/api.service.js" defer></script>
+  <script type="module" src="./js/ui/index.js" defer></script>
+  <script type="module" src="./js/eventHandling/index.js" defer></script>
+  <script type="module" src="./js/index.js" defer></script>
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="navbar">
-            <a href="/" class="active">Home</a>
-            <a href="/history.html">History</a>
-        </div>
-        <div class="stripe"></div>
-        <div class="info home-info" id="info">
-            Nothing to see here yet. Let's generate some users!
-        </div>
-        <div class="user-container hidden" id="user-container">
-            <div class="avatar">
-                <img class="profile-picture" id="profile-picture" alt="User photo" />
-            </div>
-            <div class="full-name">
-                <div class="first-name" id="first-name">
-                </div>
-                <div class="last-name" id="last-name">
-                </div>
-            </div>
-            <div class="user-details">
-                <div class="register-date-container details-container">
-                    <div class="register-date-label label">Register date</div>
-                    <div class="register-date" id="register-date"></div>
-                </div>
-                <div class="nationality-container details-container">
-                    <div class="nationality-label label">Nationality</div>
-                    <div class="nationality" id="nationality"></div>
-                </div>
-                <div class="location-address-container details-container" id="location-address-container">
-                    <div class="location-address-label label">Location adress</div>
-                    <div class="location-address" id="location-address"></div>
-                </div>
-            </div>
-        </div>
-        <div class="button-container">
-            <button class="generate-button button" id="generate-button">Generate new user</button>
-            <div class="address-checkbox">
-                <input type="checkbox" id="hide-address-checkbox" value="true" />
-                <label for="hide-address-checkbox">Hide address</label>
-            </div>
-        </div>
+  <div class="main-container">
+    <div class="navbar">
+      <a href="/" class="active">Home</a>
+      <a href="/history.html">History</a>
     </div>
+    <div class="stripe"></div>
+    <div class="info home-info" id="info">
+      Nothing to see here yet. Let's generate some users!
+    </div>
+    <div class="user-container hidden" id="user-container">
+      <div class="avatar">
+        <img class="profile-picture" id="profile-picture" alt="User photo" />
+      </div>
+      <div class="full-name">
+        <div class="first-name" id="first-name">
+        </div>
+        <div class="last-name" id="last-name">
+        </div>
+      </div>
+      <div class="user-details">
+        <div class="register-date-container details-container">
+          <div class="register-date-label label">Register date</div>
+          <div class="register-date" id="register-date"></div>
+        </div>
+        <div class="nationality-container details-container">
+          <div class="nationality-label label">Nationality</div>
+          <div class="nationality" id="nationality"></div>
+        </div>
+        <div class="location-address-container details-container" id="location-address-container">
+          <div class="location-address-label label">Location adress</div>
+          <div class="location-address" id="location-address"></div>
+        </div>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="generate-button button" id="generate-button">Generate new user</button>
+      <div class="address-checkbox">
+        <input type="checkbox" id="hide-address-checkbox" value="true" />
+        <label for="hide-address-checkbox">Hide address</label>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
