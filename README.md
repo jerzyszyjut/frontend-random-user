@@ -39,7 +39,7 @@ Make sure you have installed all the following prerequisites before developing a
 - [Fontawesome](https://fontawesome.com/) - Used for icons. Linked via [cdnjs](https://cdnjs.com/)
 - [ESLint](https://eslint.org/) - Used to enforce code style and check code quality.
 - [Husky](https://typicode.github.io/husky/#/) - Used for running git hooks.
-- [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download) - E2E Testing
+- [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress#Direct-download) - Used for E2E Testing
 
 ## APIs
 - [Random user](https://randomuser.me/) - free, open-source API for generating random user data.
