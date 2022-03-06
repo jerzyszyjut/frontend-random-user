@@ -3,6 +3,8 @@ This app is made for Profil Software internship recruitment.
 
 *Made by Jerzy Szyjut*
 
+Contact me via jerzy.szyjut@outlook.com
+
 ## Table of contents
 - [Technologies](#technologies)
 - [Prerequisites](#prerequisites)
