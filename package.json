@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "lint": "eslint \"**/*.js\"",
     "sass": "node-sass -w sass/ -o css/",
     "prepare": "husky install"
   },
@@ -28,6 +28,7 @@
     "husky": "^7.0.4"
   },
   "dependencies": {
+    "cypress-localstorage-commands": "^1.7.0",
     "node-sass": "^7.0.1"
   }
 }

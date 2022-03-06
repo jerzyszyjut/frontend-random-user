@@ -2,7 +2,7 @@ export default class HistoryService {
   static USERS_HISTORY = 'usersHistory';
 
   static getUsersHistory() {
-    if (localStorage.length === 0) {
+    if (HistoryService.isUsersHistoryEmpty()) {
       return false;
     }
     const usersHistory = localStorage.getItem(HistoryService.USERS_HISTORY);
@@ -28,10 +28,10 @@ export default class HistoryService {
   }
 
   static isUsersHistoryEmpty() {
-    if (localStorage.length === 0) {
-      return true;
+    if (localStorage.getItem(HistoryService.USERS_HISTORY)) {
+      return false;
     }
-    return false;
+    return true;
   }
 
   static hasReachedUsersHistoryLimit() {

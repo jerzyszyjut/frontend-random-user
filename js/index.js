@@ -57,7 +57,8 @@ function parseParamentersToQueryString() {
 }
 
 function addUserToLocalStorage(user) {
-  TokenService.addUserToUsersHistory(parseUserForHistory(user));
+  const parsedUser = parseUserForHistory(user);
+  TokenService.addUserToUsersHistory(parsedUser);
 }
 
 function hideInfoAndShowUserContent() {
