@@ -28,7 +28,7 @@ To run the app I used [Live Server extension](https://marketplace.visualstudio.c
 
 To run app, using this extensions, you need to press "Go Live" button in the right bottom corner of the IDE.
 
-![vscode1](./docs/1.png)
+![vscode1](./docs/images/1.png)
 ### EditorConfig
 To enforce settings written in .editorconfig you just need to install [EditorConfig extension](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
 ### SASS (SCSS)
@@ -36,4 +36,4 @@ For compiling SASS to CSS I used [Live Sass Compiler extension](https://marketpl
 
 To run compiler, using this extensions, you need to press "Watch Sass" button in the right bottom corner of the IDE.
 
-![vscode2](./docs/2.png)
+![vscode2](./docs/images/2.png)
