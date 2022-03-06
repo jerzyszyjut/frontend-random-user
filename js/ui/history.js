@@ -35,7 +35,7 @@ function updateIcons(filters) {
 function generateCell(className, value) {
   const cellElement = document.createElement('div');
   cellElement.setAttribute('class', `cell ${className}`);
-  let date;
+  let date = value;
   if (className === 'register_date') {
     date = new Date(value).toLocaleString('en-GB', { timeZone: 'UTC' });
   }

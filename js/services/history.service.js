@@ -37,7 +37,7 @@ export default class HistoryService {
   static hasReachedUsersHistoryLimit() {
     let users = localStorage.getItem(HistoryService.USERS_HISTORY);
     users = JSON.parse(users);
-    if (users.length > 10) {
+    if (users.length > 9) {
       return true;
     }
     return false;
