@@ -1,4 +1,3 @@
-/* eslint-disable */
 /// <reference types="cypress" />
 
 context('Navigation', () => {
