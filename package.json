@@ -1,0 +1,33 @@
+{
+  "name": "random-user-generator-profil-software-recruitment",
+  "version": "1.0.0",
+  "description": "- [Technologies](#technologies)\r - [Dependencies](#dependencies)\r - [APIs](#apis)\r - [Setup](#setup)\r     - [Local hosting](#local-hosting)\r     - [EditorConfig](#editorconfig)\r     - [SASS](#sass-scss)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "sass": "node-sass -w sass/ -o css/",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerzyszyjut/frontend-random-user.git"
+  },
+  "author": "Jerzy Szyjut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerzyszyjut/frontend-random-user/issues"
+  },
+  "homepage": "https://github.com/jerzyszyjut/frontend-random-user#readme",
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "husky": "^7.0.4"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
