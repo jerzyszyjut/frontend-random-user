@@ -2,10 +2,10 @@
 
 context('Navigation', () => {
   beforeEach(() => {
-    cy.visit('http://192.168.0.43:8080/')
+    cy.visit('/')
   })
 
-  it('Should correctly navigate', () => {
+  it('should correctly navigate', () => {
     cy.get('.home').click()
     cy.location('pathname').should('eq', '/')
 
