@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jerzy Szyjut">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="module" src="./js/services/history.service.js" defer></script>
     <script type="module" src="./js/services/api.service.js" defer></script>
     <script type="module" src="./js/ui/index.js" defer></script>
@@ -20,7 +23,8 @@
             <a href="/" class="active">Home</a>
             <a href="/history.html">History</a>
         </div>
-        <div class="info" id="info">
+        <div class="stripe"></div>
+        <div class="info home-info" id="info">
             Nothing to see here yet. Let's generate some users!
         </div>
         <div class="user-container hidden" id="user-container">
@@ -49,7 +53,7 @@
             </div>
         </div>
         <div class="button-container">
-            <button class="generate-button" id="generate-button">Generate new user</button>
+            <button class="generate-button button" id="generate-button">Generate new user</button>
             <div class="address-checkbox">
                 <input type="checkbox" id="hide-address-checkbox" value="true" />
                 <label for="hide-address-checkbox">Hide address</label>
