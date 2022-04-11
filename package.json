@@ -1,5 +1,5 @@
 {
-  "name": "random-user-generator-profil-software-recruitment",
+  "name": "random-user-generator",
   "version": "1.0.0",
   "description": "- [Technologies](#technologies)\r - [Dependencies](#dependencies)\r - [APIs](#apis)\r - [Setup](#setup)\r     - [Local hosting](#local-hosting)\r     - [EditorConfig](#editorconfig)\r     - [SASS](#sass-scss)",
   "main": "index.js",
