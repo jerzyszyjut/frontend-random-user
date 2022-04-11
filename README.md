@@ -1,5 +1,5 @@
 # Random user generator
-This app is made for Profil Software internship recruitment.
+This app is made for internship recruitment.
 
 *Made by Jerzy Szyjut*
 
